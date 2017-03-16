@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sample App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="stylesheet" src="./css/test.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/react-switch-button/dist/react-switch-button.css">
+    
+    <style>
+	    #root {
+	      padding: 25px;
+	    }
+
+	    /* make tab to content width */
+	    .navChk{
+	    	display: inline-block;
+	    }
+
+	    /* for 'ButtonGroups' component begins */
+		.tabMenu .nav-tabs>li.active>a {
+		    color: #fff;
+		    background-color: #337ab7;
+		    border-color: #2e6da4;
+		}
+
+		.tabMenu .nav-tabs {
+		    border: 1px solid #ddd;
+		    border-radius: 22px;
+		}
+
+		.tabMenu .nav-tabs>li.active>a, .tabMenu .nav-tabs>li.active>a:focus, .tabMenu .nav-tabs>li.active>a:hover {
+		    color: #fff; 
+		    cursor: default;
+		    background-color: #337ab7;
+		    border: 0px solid #fff;
+		    border-bottom-color: transparent;
+		}
+
+		.tabMenu .nav-tabs>li>a {
+		    margin-right: 2px;
+		    line-height: 1.42857143;
+		    border: 0px solid transparent;
+		    border-radius: 0 0 0 0;
+		}
+
+		.tabMenu .nav-tabs>li.active:first-child>a, .tabMenu .nav-tabs>li:first-child>a:hover, .tabMenu .nav-tabs>li:first-child>a:focus{
+			border-top-left-radius: 22px;
+    		border-bottom-left-radius: 22px;
+		}
+		.tabMenu .nav-tabs>li.active:last-child>a, .tabMenu .nav-tabs>li:last-child>a:hover, .tabMenu .nav-tabs>li:last-child>a:focus{
+			border-top-right-radius: 22px;
+    		border-bottom-right-radius: 22px;
+		}
+
+		.tabMenu .nav-tabs > .active > a, .tabMenu .nav-tabs > .active > a:hover { 
+			outline: 0;
+		}
+		/* for 'ButtonGroups' component Ends */
+
+
+		/* for 'StatusMenuBar' component begins */
+
+		.statusMenu .nav-tabs>li {
+		    border-right: 1px solid #ddd;
+		}
+
+		.statusMenu .nav-tabs>li.active>a {
+		    color: #fff;
+		    background-color: #337ab7;
+		    border-color: #2e6da4;
+		}
+
+		.statusMenu .nav-tabs {
+		    border: 1px solid #ddd;
+		}
+
+		.statusMenu .nav-tabs>li.active>a, .statusMenu .nav-tabs>li.active>a:focus, .statusMenu .nav-tabs>li.active>a:hover {
+		    color: #fff; 
+		    cursor: default;
+		    background-color: #337ab7;
+		    border: 0px solid #fff;
+		    border-bottom-color: transparent;
+		}
+
+		.statusMenu .nav-tabs li:hover{
+			background-color: #EEEEEE;
+		}	
+		.statusMenu .nav-tabs>li.active{
+		    background-color: #337ab7;
+		}
+
+		.statusMenu .nav-tabs>li>a {
+		    margin-right: 2px;
+		    line-height: 1.42857143;
+		    border: 0px solid transparent;
+		    border-radius: 0 0 0 0;
+		}
+		.statusMenu .nav-tabs > .active > a, .statusMenu .nav-tabs > .active > a:hover { 
+			outline: 0;
+		}
+
+		.statusMenu .nav-tabs > li:not(:last-child) > a:after, .statusMenu .nav-tabs > li:not(:last-child) > a:after {
+	        content: "";
+		    width: 0;
+		    height: 0;
+		    border-left: 7px solid transparent;
+		    border-right: 7px solid transparent;
+		    border-top: 8px solid #ddd;
+		    position: absolute;
+		    top: 16px;
+		    right: -13px;
+		    transform: rotate(268deg);
+		}
+
+		.statusMenu .nav-tabs > li.active:not(:last-child) > a:after {
+			border-top: 8px solid #337ab7;
+		}
+		/* for 'StatusMenuBar' component Ends */
+  	</style>
+
+  </head>
+  <body>
+    <div id='root'>
+    </div>
+    <script src="/static/bundle.js"></script>
+  </body>
+</html>
