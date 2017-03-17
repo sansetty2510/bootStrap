@@ -3,16 +3,26 @@ import * as util from './utils';
 
 export default class ReactBootstrapToggle extends Component {
   static propTypes = {
+    // Holds the className for label one
     onstyle: PropTypes.string,
+    // Holds the className for label two
     offstyle: PropTypes.string,
+    // The className for the handle
     handlestyle: PropTypes.string,
+    // Height prop
     height: PropTypes.string,
+    // Width prop
     width: PropTypes.string,
+    // The on and off elements defaults to 'On' and 'Off'
     on: PropTypes.node,
     off: PropTypes.node,
+    // The initial state of the component
     active: PropTypes.bool,
+    // Sets the button to disabled
     disabled: PropTypes.bool,
+    // Set the size of the button defaults to normal
     size: PropTypes.string,
+    // The onClick event, returns the state as the argument
     onClick: PropTypes.func,
     id: PropTypes.string,
     className: PropTypes.string,
@@ -66,11 +76,13 @@ export default class ReactBootstrapToggle extends Component {
     const width = Math.max(onDim.width, offDim.width);
     const height = Math.max(onDim.height, offDim.height);
 
+    // Check if the sizes are the same with a margin of error of one pixel
     const areAlmostTheSame = (
       util.compareWithMarginOfError(this.state.width, width) &&
       util.compareWithMarginOfError(this.state.height, height)
     );
 
+    // if they are the same then return
     if (areAlmostTheSame) {
       return;
     }
@@ -116,8 +128,8 @@ export default class ReactBootstrapToggle extends Component {
     }
 
     return (
+      // eslint-disable-next-line jsx-a11y/no-static-element-interactions
       <div
-        role="button"
         id={this.props.id}
         disabled={this.props.disabled}
         className={className}
@@ -138,7 +150,7 @@ export default class ReactBootstrapToggle extends Component {
           >
             {this.props.off}
           </span>
-          <span className={`toggle-handle btn btn-${this.props.handlestyle} ${sizeClass}`} />
+          <div className={`toggle-handle btn btn-${this.props.handlestyle} ${sizeClass}`} />
         </div>
       </div>
     );

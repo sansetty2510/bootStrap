@@ -160,7 +160,7 @@ export default class App extends React.Component {
 
 		       	<BootStrapSwitch/> 	
 
-		         <ButtonGroups/>
+		        <ButtonGroups/>
 
 		        <MultiSelect/>
 
